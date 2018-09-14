@@ -11,7 +11,6 @@ struct Dimensions {
       // coordinates: coordenadas
       // dimensions: cantidad de dimensiones
     int operator()(int* coordinates, int* sizes, int dimensions) {
-        // TODO
         int position = 0;
         for(int i=dimensions-1;i>=0;--i){
             position *= sizes[i];
@@ -28,8 +27,9 @@ struct Integer {
 
 int main(int argc, char *argv[]) {
     int dimsz[3] = {2,2,2};
+    int coordinates[] = {0,0,0};
     Vector<Integer> v(3, dimsz);
-    // cout<<v({1,0,1},dimsz,3);
-    system("pause");
+    v.set(3,coordinates);
+    cout<<v.get(coordinates);
     return EXIT_SUCCESS;
 }
