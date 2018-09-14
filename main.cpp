@@ -7,9 +7,6 @@ using namespace std;
 
 template <typename T>
 struct Dimensions {
-      // sizes : tamaño de cada diemnsion
-      // coordinates: coordenadas
-      // dimensions: cantidad de dimensiones
     int operator()(int* coordinates, int* sizes, int dimensions) {
         int position = 0;
         for(int i=dimensions-1;i>=0;--i){

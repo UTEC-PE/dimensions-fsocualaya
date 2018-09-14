@@ -19,8 +19,6 @@ class Vector {
     public:
         Vector() : data(nullptr) {};
 
-        //dimensions: cantidad de dimensiones
-        //dimensionSizes: tamaño de cada dimension
 
         Vector(int dimensions, int* dimensionSizes) : dimensions(dimensions), dimensionSizes(dimensionSizes) {
             dataSize = 1;
@@ -37,7 +35,7 @@ class Vector {
             return data[op(coordinates, dimensionSizes, dimensions)];
         };
         ~Vector(){
-            delete data;
+            delete[] data;
         };
 };
 
