@@ -37,7 +37,7 @@ class Vector {
             return data[op(coordinates, dimensionSizes, dimensions)];
         };
         ~Vector(){
-//            delete this;
+            delete data;
         };
 };
 
